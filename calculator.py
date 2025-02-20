@@ -17,19 +17,21 @@ except:
  print("Du Idiot. Zahl geht nicht")
  error = True
 
-operator = input("Was wollen Sie machen? ")
+operator = input("Was wollen Sie machen (+ | - | * | / )? ")
 
-if operator.lower() == "addieren" and error == False:
+if operator == "+" and error == False:
     Ergebnis = Zahl1 + Zahl2
-elif operator.lower() == "subtrahieren" and error == False:
+elif operator == "-" and error == False:
     Ergebnis = Zahl1 - Zahl2
-elif operator.lower() == "multiplizieren" and error == False:
+elif operator == "*" and error == False:
     Ergebnis = Zahl1 * Zahl2
-elif operator.lower() == "dividieren" and error == False:
+elif operator == "/" and error == False:
      Ergebnis = Zahl1 / Zahl2
 else:
   print("Eingabefehler")
-
-print(f"Das Ergebnis ist {Ergebnis}")
+if error == False:
+    print(f"Das Ergebnis ist {Ergebnis}")
+else:
+   print("Bro was war dein Ziel? Versuch es normal mit richtigen Eingaben")
 
 
